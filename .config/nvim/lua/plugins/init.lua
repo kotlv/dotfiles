@@ -24,6 +24,7 @@ require("packer").startup { function()
     use { "hrsh7th/cmp-nvim-lua" }
     use { "saadparwaiz1/cmp_luasnip"}
     use { "L3MON4D3/LuaSnip" }
+    use { "folke/which-key.nvim" }
 end }
 
 require "plugins/material"
@@ -37,3 +38,4 @@ require "plugins/lspconfig"
 require "plugins/nvim-cmp"
 require "plugins/treesitter"
 require "plugins/navigator"
+require "plugins/which-key"
