@@ -25,6 +25,7 @@ require("packer").startup { function()
     use { "saadparwaiz1/cmp_luasnip"}
     use { "L3MON4D3/LuaSnip" }
     use { "folke/which-key.nvim" }
+    use { "jose-elias-alvarez/null-ls.nvim" }
 end }
 
 require "plugins/material"
@@ -39,3 +40,4 @@ require "plugins/nvim-cmp"
 require "plugins/treesitter"
 require "plugins/navigator"
 require "plugins/which-key"
+require "plugins/null-ls"

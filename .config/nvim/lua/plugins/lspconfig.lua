@@ -42,27 +42,6 @@ lspconfig.pyright.setup {
     },
 }
 
-lspconfig.efm.setup {
-    on_attach = on_attach,
-    init_options = { documentFormatting = true },
-    settings = {
-        rootMarkers = { ".git/" },
-        lintDebounce = 100,
-        languages = {
-            python = { 
-                {
-                    lintCommand = "pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}",
-                    lintFormats = { "%f:%l:%c:%t:%m" },
-                },
-                {
-                    formatCommand = "black --fast -",
-                    formatStdin = true,
-                },
-            },
-        }
-    }
-}
-
 for type, icon in pairs(ui.diagnostics_signs) do
     local hl = "LspDiagnosticsSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
