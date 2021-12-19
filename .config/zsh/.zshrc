@@ -86,7 +86,10 @@ bindkey '^e' edit-command-line
 # Load zsh-syntax-highlighting; should be last.
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+# pyenv setup
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
-export PATH="$PATH:$HOME/.config/zsh/scripts/"
+export PATH="$PATH:$HOME/.config/zsh/executable/"
+
+. "$HOME/.cargo/env"
